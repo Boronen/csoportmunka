@@ -1,64 +1,81 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <title>Kovács Kevin – Munkáim</title>
-    <meta name="description" content="Kovács Kevin programozási, file architecting és játékfejlesztési munkái, köztük a Project PP.">
-    <meta name="keywords" content="Kovács Kevin, programozás, játékfejlesztés, file architecting, Project PP, portfólió">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Kovács Kevin programozási, file architecting és játékfejlesztési munkái, köztük a Project PP.">
+    <meta name="keywords"
+        content="Kovács Kevin, programozás, játékfejlesztés, file architecting, Project PP, portfólió">
+    <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body class="lang-hu">
-<header class="site-header">
-    <div class="logo-group">
-    <img src="assets/logo.png" alt="BORONEN logó" class="boronen-logo">
-    <span class="logo-text">Kovács Kevin</span>
-</div>
-    <nav class="main-nav">
-        <a href="index.html">Bemutatkozás</a>
-        <a href="projects.html" class="active">Munkáim</a>
-        <a href="downloads/suli-agazati-proba.zip" download>Letöltés: suli-agazati-proba.rar</a>
-    </nav>
-    <div class="lang-switch">
-        <a href="projects.html" class="active">HU</a> |
-        <a href="projects-en.html">EN</a>
-    </div>
-</header>
-
-<main class="grid-container projects-layout">
-    <section class="intro card">
-        <h1>Munkáim és iskolai projektjeim</h1>
-        <p>leírás hogy mi az oldal</p>
-    </section>
-
-    <section class="card">
-        <h2>Programozás</h2>
-        <div class="card-grid">
-           <p>jövedelem</p>
+    <header class="site-header">
+        <div class="logo-group">
+            <img src="assets/logo.png" alt="BORONEN logó" class="boronen-logo">
+            <span class="logo-text">Kovács Kevin</span>
         </div>
-    </section>
-
-    <section class="card">
-        <h2>File architecting</h2>
-        <div class="card-grid">
-            <p>csalt menyiség</p>
+        <nav class="main-nav">
+            <a href="index.html">Bemutatkozás</a>
+            <a href="urlap.html" class="active">Munkáim</a>
+            <a href="downloads/suli-agazati-proba.zip" download>Letöltés: suli-agazati-proba.rar</a>
+        </nav>
+        <div class="lang-switch">
+            <a href="projects.html" class="active">HU</a> |
+            <a href="projects-en.html">EN</a>
         </div>
-    </section>
+    </header>
 
-    <section class="card">
-        <h2>Jelenlegi játékprojekt – Project PP</h2>
-        <div class="project-pp-layout">
-            <p>legalitás</p>
-        </div>
-    </section>
+    <main class="grid-container projects-layout">
+        <form action="valami_jo_ami_nincs_ebben_a_kodban.php" method="post">
+            <section class="intro card">
+                <p>leírás hogy mi az oldal</p>
+            </section>
 
-    <section class="card">
-        <h2>Letöltések</h2>
-        <p>igazolás/leadás/reszetelés</p>
-    </section>
-</main>
+            <section class="card">
+                <fieldset>
+                    <legend>információ megadás</legend>
+                    <label for="vnev">Vezeték név</label>
+                    <input type="text" name="vezeteknev" id="vnev" title="Írja be a Vezeték Nevét!" placeholder="Orbán" required><br>
+                    <label for="knev">Kereszt név</label>
+                    <input type="text" name="keresztnev" id="knev" title="Írja be a Kereszt Nevét!" placeholder="Viktor" required><br>
+                    <label for="email">email cím</label>
+                    <input type="email" name="email" id="email" title="Írja be a Vezeték Nevét!" placeholder="orban.viktor@biztos-valasztas.ru" required><br>
+                    <label for="szem_id">Személy igazolványszám</label>
+                    <input type="text" name="szem_id" id="szem_id" title="EZT KI OLVASSA EL?????" placeholder="11111111111" minlength="11" maxlength="11" required><br>
+                </fieldset>
+            </section>
 
-<footer class="site-footer">
-    <p>&copy; 2026 Kovács Kevin</p>
-</footer>
+            <section class="card">
+                <fieldset>
+                    <legend>Esemény ki választása</legend>
+                    <label for="esemeny">esemény</label>
+                    <select name="esemeny" id="esemeny">
+                        <option value="0">Digitális Ügyintézés Napja</option>
+                        <option value="1">Sorszámgyüjtő Maraton</option>
+                        <option value="2">Kérdezz bármit, válaszolunk mást</option>
+                        <option value="3">Éves rattár-vadászat</option>
+                        <option value="4">Eltűnt Űrlapok Éjszakája</option>
+                        <option value="5">Kérelmek Resetelése</option>
+                    </select>
+                </fieldset>
+            </section>
+
+            <section class="card">
+                <p>legalitás</p>
+            </section>
+
+            <section class="card">
+                <p>igazolás/leadás/reszetelés</p>
+            </section>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Kovács Kevin</p>
+    </footer>
 </body>
+
 </html>
