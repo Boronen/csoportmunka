@@ -38,3 +38,27 @@
     border-bottom: 2px solid #38bdf8;
     padding-bottom: 0.25rem;
 }
+
+.esemeny-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.esemeny {
+    background: #0b1220;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #fd1e00;
+    border-radius: 0.5rem;
+}
+
+.esemeny h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+    color: #e5e7eb;
+}
+
+.esemeny p {
+    margin: 0;
+    color: #cbd5e1;
+}
