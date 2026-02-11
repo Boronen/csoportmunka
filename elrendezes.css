@@ -1,0 +1,22 @@
+.grid-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.project-card {
+    flex: 1 1 260px;
+    background: #020617;
+    border-radius: 0.9rem;
+    padding: 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+}
