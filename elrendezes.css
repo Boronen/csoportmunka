@@ -29,3 +29,8 @@
     color: #9ca3af;
     background: #020617;
 }
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+}

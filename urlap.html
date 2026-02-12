@@ -3,48 +3,110 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Kovács Kevin – Munkáim</title>
+    <title>NEM nemzeti adó‑ és vámhivatal – Eseménylista</title>
     <meta name="description"
-        content="Kovács Kevin programozási, file architecting és játékfejlesztési munkái, köztük a Project PP.">
-    <meta name="keywords"
-        content="Kovács Kevin, programozás, játékfejlesztés, file architecting, Project PP, portfólió">
-    <link rel="stylesheet" href="style/style.css">
+        content="A NEM NAV fiktív, humoros eseményei és rendezvényei, ahol semmi sem történik időben.">
+    <meta name="keywords" content="NEM NAV, események, humor, paródia, bürokrácia">
+
+    <link rel="stylesheet" href="formazasok.css">
+    <link rel="stylesheet" href="navigacio.css">
+    <link rel="stylesheet" href="elrendezes.css">
+    <link rel="stylesheet" href="esemenyek.css">
+    <link rel="stylesheet" href="slideshow.css">
+
 </head>
 
 <body class="lang-hu">
     <header class="site-header">
         <div class="logo-group">
-            <img src="assets/logo.png" alt="BORONEN logó" class="boronen-logo">
-            <span class="logo-text">Kovács Kevin</span>
+            <img src="assets/NAV.png" alt="NEM nav logó" class="boronen-logo">
+            <span class="logo-text">NEM nemzeti adó‑ és vámhivatal</span>
         </div>
         <nav class="main-nav">
-            <a href="index.html">Bemutatkozás</a>
-            <a href="urlap.html" class="active">Munkáim</a>
-            <a href="downloads/suli-agazati-proba.zip" download>Letöltés: suli-agazati-proba.rar</a>
+            <a href="index.html">Események</a>
+            <a href="urlap.html" class="active">Űrlapok</a>
         </nav>
-        <div class="lang-switch">
-            <a href="projects.html" class="active">HU</a> |
-            <a href="projects-en.html">EN</a>
-        </div>
+
     </header>
 
     <main class="grid-container projects-layout">
         <form action="valami_jo_ami_nincs_ebben_a_kodban.php" method="post">
-            <section class="intro card">
-                <p>leírás hogy mi az oldal</p>
-            </section>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="assets/biztosvalasztas.png" style="width:100%">
+                    <div class="text">Csak a Biztos!</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="assets/hatvanpuszta.jpg" style="width:100%">
+                    <div class="text">Hatvanpuszta</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="assets/lombkorona.jpg" style="width:100%">
+                    <div class="text">Lombkoronasétány</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
 
             <section class="card">
                 <fieldset>
                     <legend>információ megadás</legend>
                     <label for="vnev">Vezeték név</label>
-                    <input type="text" name="vezeteknev" id="vnev" title="Írja be a Vezeték Nevét!" placeholder="Orbán" required><br>
+                    <input type="text" name="vezeteknev" id="vnev" title="Írja be a Vezeték Nevét!" placeholder="Orbán"
+                        required><br>
                     <label for="knev">Kereszt név</label>
-                    <input type="text" name="keresztnev" id="knev" title="Írja be a Kereszt Nevét!" placeholder="Viktor" required><br>
+                    <input type="text" name="keresztnev" id="knev" title="Írja be a Kereszt Nevét!" placeholder="Viktor"
+                        required><br>
                     <label for="email">email cím</label>
-                    <input type="email" name="email" id="email" title="Írja be a Vezeték Nevét!" placeholder="orban.viktor@biztos-valasztas.ru" required><br>
+                    <input type="email" name="email" id="email" title="Írja be a Vezeték Nevét!"
+                        placeholder="orban.viktor@biztos-valasztas.ru" required><br>
                     <label for="szem_id">Személy igazolványszám</label>
-                    <input type="text" name="szem_id" id="szem_id" title="EZT KI OLVASSA EL?????" placeholder="11111111111" minlength="11" maxlength="11" required><br>
+                    <input type="text" name="szem_id" id="szem_id" title="EZT KI OLVASSA EL?????"
+                        placeholder="11111111111" minlength="11" maxlength="11" required><br>
                 </fieldset>
             </section>
 
@@ -64,17 +126,36 @@
             </section>
 
             <section class="card">
-                <p>legalitás</p>
+                <h2>Legalitási nyilatkozat</h2>
+                <p> A Küldés gomb megnyomásával Ön kijelenti, hogy: </p>
+                <ul>
+                    <li>tudomásul veszi, hogy az űrlap tartalma bármikor elveszhet,</li>
+                    <li>elfogadja, hogy a rendszer nem garantál semmit,</li>
+                    <li>megérti, hogy a beadott adatok akár egy másik dimenzióba is kerülhetnek,</li>
+                    <li>és vállalja, hogy a hibákért kizárólag a felhasználót hibáztatjuk.</li>
+                </ul>
+
             </section>
 
             <section class="card">
-                <p>igazolás/leadás/reszetelés</p>
+                <h2>Igazolás, leadás, resetelés</h2>
+                <p> Az űrlap elküldése után rendszerünk automatikusan: </p>
+                <ol>
+                    <li>generál egy igazolást arról, hogy Ön megpróbálta beadni az űrlapot,</li>
+                    <li>majd ezt az igazolást véletlenszerűen törli,</li>
+                    <li>végül visszaállítja az űrlapot alaphelyzetbe, mintha semmi sem történt volna.</li>
+                </ol>
+                <p> Ha mindezek ellenére szeretné folytatni, kattintson a Küldés gombra. </p> <button type="submit"
+                    class="submit-btn">Küldés</button>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1"> Elfogadom a totál igazi <a href="aszf.html">ASZF-et</a></label><br>
             </section>
         </form>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 Kovács Kevin</p>
+        <p>&copy; 2026 NEM nemzeti adó‑ és vámhivatal</p>
+        <p>Készült a DUNA párt megbízásából</p>
     </footer>
 </body>
 
